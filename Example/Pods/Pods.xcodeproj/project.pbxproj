@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		29AAC57ECCC238CD66463DC993970BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */; };
+		3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F471E09070D000C42E1 /* UncertainValue.swift */; };
 		55DDA2839542C88BBFC7CE7E89C9046D /* WTOnlineLinearRegression-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF4366FC2DE09CD971C431A825EAB7 /* WTOnlineLinearRegression-dummy.m */; };
 		C1841D2A9C05894A42C5C79801292A4C /* WTOnlineLinearRegression-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5C50A97723BCF94B053C64FE823225 /* WTOnlineLinearRegression-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFB89DEFBB0424CD4A36D211434577E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -32,6 +33,7 @@
 		2A50D4CE182DAB778ACCF266D5941C78 /* WTOnlineLinearRegression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTOnlineLinearRegression.modulemap; sourceTree = "<group>"; };
 		3231226EEABEA706D9DC9E7CACDA1A72 /* WTOnlineLinearRegression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-prefix.pch"; sourceTree = "<group>"; };
 		3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidArgumentError.swift; sourceTree = "<group>"; };
+		3BBA4F471E09070D000C42E1 /* UncertainValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncertainValue.swift; sourceTree = "<group>"; };
 		60A1D20F4CB682214B62B106712968A7 /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		662CC14BD8293047770A3D5460E656EF /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7678785C7B46017086715D37D98DD6DA /* Pods-WTOnlineLinearRegression_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTOnlineLinearRegression_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */,
+				3BBA4F471E09070D000C42E1 /* UncertainValue.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */,
+				3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */,
 				55DDA2839542C88BBFC7CE7E89C9046D /* WTOnlineLinearRegression-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

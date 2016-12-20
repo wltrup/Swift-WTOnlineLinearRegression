@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BBA4F3E1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F3D1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift */; };
+		3BBA4F461E0906F7000C42E1 /* UncertainValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F451E0906F7000C42E1 /* UncertainValueTests.swift */; };
 		EEB3EF2C3122094CFBD8A466 /* Pods_WTOnlineLinearRegression_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026F5ABD38EC47FF7DC7B6A7 /* Pods_WTOnlineLinearRegression_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,6 +17,7 @@
 		1CFD576C7506E2FD669EF51C /* WTOnlineLinearRegression.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WTOnlineLinearRegression.podspec; path = ../WTOnlineLinearRegression.podspec; sourceTree = "<group>"; };
 		3B7C31701DF549E5008D4CD3 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		3BBA4F3D1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidArgumentErrorTests.swift; sourceTree = "<group>"; };
+		3BBA4F451E0906F7000C42E1 /* UncertainValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncertainValueTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WTOnlineLinearRegression_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTOnlineLinearRegression_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		649E175066A7189F9D8EC2B3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				3BBA4F3D1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift */,
+				3BBA4F451E0906F7000C42E1 /* UncertainValueTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBA4F3E1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift in Sources */,
+				3BBA4F461E0906F7000C42E1 /* UncertainValueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
