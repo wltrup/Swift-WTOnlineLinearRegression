@@ -59,7 +59,7 @@ class InvalidArgumentErrorTests: XCTestCase
     }
 
     // MARK: -
-    
+
     func testInequality12()
     {
         let error1 = InvalidArgumentError<Double>.negativeValue(-1)
