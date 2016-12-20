@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'WTOnlineLinearRegression_Tests' do
+  pod 'WTOnlineLinearRegression', :path => '../'
+end

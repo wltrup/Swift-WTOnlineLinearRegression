@@ -1,0 +1,22 @@
+{
+  "name": "WTOnlineLinearRegression",
+  "version": "1.0.0",
+  "summary": "WTOnlineLinearRegression adds a method to generate pseudo-random boolean values.",
+  "description": "WTOnlineLinearRegression adds a method to generate uniformly-distributed pseudo-random boolean values.",
+  "homepage": "https://github.com/wltrup/WTOnlineLinearRegression",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Wagner Truppel": "trupwl@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/wltrup/WTOnlineLinearRegression.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WTOnlineLinearRegression/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - WTOnlineLinearRegression (1.0.0)
+
+DEPENDENCIES:
+  - WTOnlineLinearRegression (from `../`)
+
+EXTERNAL SOURCES:
+  WTOnlineLinearRegression:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WTOnlineLinearRegression: de02c5967d6575efc0b3d0c8fd2e11300ac70aca
+
+PODFILE CHECKSUM: 4e4833d5887ef987e4df25e87405dc0ff3ae47fd
+
+COCOAPODS: 1.1.1
