@@ -158,8 +158,7 @@ public enum Equation<BFPType: BinaryFloatingPoint>: Equatable
     //
     /// - Returns: whether or not the two instances are considered equal.
     //
-    public static func ==(lhs: Equation,
-                          rhs: Equation) -> Bool
+    public static func ==(lhs: Equation, rhs: Equation) -> Bool
     {
         switch (lhs, rhs)
         {
