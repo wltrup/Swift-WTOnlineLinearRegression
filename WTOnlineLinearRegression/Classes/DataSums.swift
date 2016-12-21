@@ -1,5 +1,5 @@
 /*
- LinearRegressionDataSums.swift
+ DataSums.swift
  WTOnlineLinearRegression
 
  Created by Wagner Truppel on 2016.12.07
@@ -46,7 +46,7 @@ import Foundation
 ///
 /// `BFPType` is any `BinaryFloatingPoint` type such as `Double` or `CGFloat`.
 ///
-public struct LinearRegressionDataSums<BFPType: BinaryFloatingPoint>: Equatable
+public struct DataSums<BFPType: BinaryFloatingPoint>: Equatable
 {
     /// The sum of the observations' (1 over y-variance) values over the
     /// collection of observations used to perform the linear regression
@@ -151,8 +151,7 @@ public struct LinearRegressionDataSums<BFPType: BinaryFloatingPoint>: Equatable
     ///
     /// - Returns: whether or not the two instances are considered equal.
     ///
-    public static func ==(lhs: LinearRegressionDataSums,
-                          rhs: LinearRegressionDataSums) -> Bool
+    public static func ==(lhs: DataSums, rhs: DataSums) -> Bool
     {
         return lhs.oneOverVarianceY == rhs.oneOverVarianceY &&
             lhs.xOverVarianceY == rhs.xOverVarianceY &&

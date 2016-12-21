@@ -1,5 +1,5 @@
 //
-//  LinearRegressionDataSumsTests.swift
+//  DataSumsTests.swift
 //  WTOnlineLinearRegression
 //
 //  Created by Wagner Truppel on 2016.12.07.
@@ -12,7 +12,7 @@ import XCTest
 
 @testable import WTOnlineLinearRegression
 
-class LinearRegressionDataSumsTests: XCTestCase
+class DataSumsTests: XCTestCase
 {
     let oneOverVarianceY: Double = 1
     let xOverVarianceY: Double = 2
@@ -23,7 +23,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testNoParamInit()
     {
-        let sut = LinearRegressionDataSums<Double>()
+        let sut = DataSums<Double>()
 
         XCTAssertEqual(sut.oneOverVarianceY, 0)
         XCTAssertEqual(sut.xOverVarianceY, 0)
@@ -35,7 +35,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testParamsInit()
     {
-        let sut = try! LinearRegressionDataSums<Double>(
+        let sut = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -60,7 +60,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
         do
         {
-            let _ = try LinearRegressionDataSums<Double>(
+            let _ = try DataSums<Double>(
                 oneOverVarianceY: oneOverVarianceY,
                 xOverVarianceY: xOverVarianceY,
                 yOverVarianceY: yOverVarianceY,
@@ -86,7 +86,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
         do
         {
-            let _ = try LinearRegressionDataSums<Double>(
+            let _ = try DataSums<Double>(
                 oneOverVarianceY: oneOverVarianceY,
                 xOverVarianceY: xOverVarianceY,
                 yOverVarianceY: yOverVarianceY,
@@ -112,7 +112,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
         do
         {
-            let _ = try LinearRegressionDataSums<Double>(
+            let _ = try DataSums<Double>(
                 oneOverVarianceY: oneOverVarianceY,
                 xOverVarianceY: xOverVarianceY,
                 yOverVarianceY: yOverVarianceY,
@@ -134,24 +134,24 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     // MARK: -
 
-        func testEquality()
-        {
-            let sut1 = try! LinearRegressionDataSums<Double>(
-                oneOverVarianceY: oneOverVarianceY,
-                xOverVarianceY: xOverVarianceY,
-                yOverVarianceY: yOverVarianceY,
-                xyOverVarianceY: xyOverVarianceY,
-                xSquaredOverVarianceY: xSquaredOverVarianceY,
-                ySquaredOverVarianceY: ySquaredOverVarianceY
-            )
+    func testEquality()
+    {
+        let sut1 = try! DataSums<Double>(
+            oneOverVarianceY: oneOverVarianceY,
+            xOverVarianceY: xOverVarianceY,
+            yOverVarianceY: yOverVarianceY,
+            xyOverVarianceY: xyOverVarianceY,
+            xSquaredOverVarianceY: xSquaredOverVarianceY,
+            ySquaredOverVarianceY: ySquaredOverVarianceY
+        )
 
-            let sut2 = sut1
-            XCTAssertTrue(sut2 == sut1)
+        let sut2 = sut1
+        XCTAssertTrue(sut2 == sut1)
     }
 
     func testInequalityOneOverVarianceY()
     {
-        let sut1 = try! LinearRegressionDataSums<Double>(
+        let sut1 = try! DataSums<Double>(
             oneOverVarianceY: 10,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -161,7 +161,7 @@ class LinearRegressionDataSumsTests: XCTestCase
         )
 
 
-        let sut2 = try! LinearRegressionDataSums<Double>(
+        let sut2 = try! DataSums<Double>(
             oneOverVarianceY: 20,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -175,7 +175,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testInequalityXoverVarianceY()
     {
-        let sut1 = try! LinearRegressionDataSums<Double>(
+        let sut1 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: 10,
             yOverVarianceY: yOverVarianceY,
@@ -185,7 +185,7 @@ class LinearRegressionDataSumsTests: XCTestCase
         )
 
 
-        let sut2 = try! LinearRegressionDataSums<Double>(
+        let sut2 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: 20,
             yOverVarianceY: yOverVarianceY,
@@ -199,7 +199,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testInequalityYoverVarianceY()
     {
-        let sut1 = try! LinearRegressionDataSums<Double>(
+        let sut1 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: 10,
@@ -209,7 +209,7 @@ class LinearRegressionDataSumsTests: XCTestCase
         )
 
 
-        let sut2 = try! LinearRegressionDataSums<Double>(
+        let sut2 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: 20,
@@ -223,7 +223,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testInequalityXYoverVarianceY()
     {
-        let sut1 = try! LinearRegressionDataSums<Double>(
+        let sut1 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -233,7 +233,7 @@ class LinearRegressionDataSumsTests: XCTestCase
         )
 
 
-        let sut2 = try! LinearRegressionDataSums<Double>(
+        let sut2 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -247,7 +247,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testInequalityXsquaredOverVarianceY()
     {
-        let sut1 = try! LinearRegressionDataSums<Double>(
+        let sut1 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -257,7 +257,7 @@ class LinearRegressionDataSumsTests: XCTestCase
         )
 
 
-        let sut2 = try! LinearRegressionDataSums<Double>(
+        let sut2 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -271,7 +271,7 @@ class LinearRegressionDataSumsTests: XCTestCase
 
     func testInequalityYsquaredOverVarianceY()
     {
-        let sut1 = try! LinearRegressionDataSums<Double>(
+        let sut1 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -281,7 +281,7 @@ class LinearRegressionDataSumsTests: XCTestCase
         )
 
 
-        let sut2 = try! LinearRegressionDataSums<Double>(
+        let sut2 = try! DataSums<Double>(
             oneOverVarianceY: oneOverVarianceY,
             xOverVarianceY: xOverVarianceY,
             yOverVarianceY: yOverVarianceY,
@@ -289,7 +289,7 @@ class LinearRegressionDataSumsTests: XCTestCase
             xSquaredOverVarianceY: xSquaredOverVarianceY,
             ySquaredOverVarianceY: 20
         )
-
+        
         XCTAssertTrue(sut2 != sut1)
     }
 }

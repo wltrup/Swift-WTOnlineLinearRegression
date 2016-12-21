@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29AAC57ECCC238CD66463DC993970BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		3B9C4F781E09FE2F00E19B4D /* LinearRegressionDataSums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F771E09FE2F00E19B4D /* LinearRegressionDataSums.swift */; };
+		3B9C4F781E09FE2F00E19B4D /* DataSums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F771E09FE2F00E19B4D /* DataSums.swift */; };
 		3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */; };
 		3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F471E09070D000C42E1 /* UncertainValue.swift */; };
 		3BBA4F4C1E09077D000C42E1 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F4B1E09077D000C42E1 /* Observation.swift */; };
@@ -35,7 +35,7 @@
 		1BA2D3A21E4B3F895C9EF15A471BD487 /* Pods-WTOnlineLinearRegression_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTOnlineLinearRegression_Tests-resources.sh"; sourceTree = "<group>"; };
 		2A50D4CE182DAB778ACCF266D5941C78 /* WTOnlineLinearRegression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTOnlineLinearRegression.modulemap; sourceTree = "<group>"; };
 		3231226EEABEA706D9DC9E7CACDA1A72 /* WTOnlineLinearRegression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-prefix.pch"; sourceTree = "<group>"; };
-		3B9C4F771E09FE2F00E19B4D /* LinearRegressionDataSums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegressionDataSums.swift; sourceTree = "<group>"; };
+		3B9C4F771E09FE2F00E19B4D /* DataSums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSums.swift; sourceTree = "<group>"; };
 		3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidArgumentError.swift; sourceTree = "<group>"; };
 		3BBA4F471E09070D000C42E1 /* UncertainValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncertainValue.swift; sourceTree = "<group>"; };
 		3BBA4F4B1E09077D000C42E1 /* Observation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				3BBA4F471E09070D000C42E1 /* UncertainValue.swift */,
 				3BBA4F4B1E09077D000C42E1 /* Observation.swift */,
 				3BBA4F4F1E0909FE000C42E1 /* Equation.swift */,
-				3B9C4F771E09FE2F00E19B4D /* LinearRegressionDataSums.swift */,
+				3B9C4F771E09FE2F00E19B4D /* DataSums.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */,
 				55DDA2839542C88BBFC7CE7E89C9046D /* WTOnlineLinearRegression-dummy.m in Sources */,
 				3BBA4F501E0909FE000C42E1 /* Equation.swift in Sources */,
-				3B9C4F781E09FE2F00E19B4D /* LinearRegressionDataSums.swift in Sources */,
+				3B9C4F781E09FE2F00E19B4D /* DataSums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
