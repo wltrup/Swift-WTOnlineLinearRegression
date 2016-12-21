@@ -1,5 +1,5 @@
 /*
- LinearRegressionEquation.swift
+ Equation.swift
  WTOnlineLinearRegression
 
  Created by Wagner Truppel on 2016.12.07
@@ -51,7 +51,7 @@ import Foundation
 ///
 /// `BFPType` is any `BinaryFloatingPoint` type such as `Double` or `CGFloat`.
 ///
-public enum LinearRegressionEquation<BFPType: BinaryFloatingPoint>: Equatable
+public enum Equation<BFPType: BinaryFloatingPoint>: Equatable
 {
     /// Represents a line that is not vertical.
     case finiteSlope(slope: UncertainValue<BFPType>, interceptY: UncertainValue<BFPType>)
@@ -158,8 +158,8 @@ public enum LinearRegressionEquation<BFPType: BinaryFloatingPoint>: Equatable
     //
     /// - Returns: whether or not the two instances are considered equal.
     //
-    public static func ==(lhs: LinearRegressionEquation,
-                          rhs: LinearRegressionEquation) -> Bool
+    public static func ==(lhs: Equation,
+                          rhs: Equation) -> Bool
     {
         switch (lhs, rhs)
         {

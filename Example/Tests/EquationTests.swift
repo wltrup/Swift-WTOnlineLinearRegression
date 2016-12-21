@@ -1,5 +1,5 @@
 //
-//  LinearRegressionEquationTests.swift
+//  EquationTests.swift
 //  WTOnlineLinearRegression
 //
 //  Created by Wagner Truppel on 2016.12.07.
@@ -12,15 +12,15 @@ import XCTest
 
 import WTOnlineLinearRegression
 
-class LinearRegressionEquationTests: XCTestCase
+class EquationTests: XCTestCase
 {
     var slope: UncertainValue<Double>!
     var interceptY: UncertainValue<Double>!
     var interceptX: Double!
 
-    var linEq1: LinearRegressionEquation<Double>!
-    var linEq2: LinearRegressionEquation<Double>!
-    var linEq3: LinearRegressionEquation<Double>!
+    var linEq1: Equation<Double>!
+    var linEq2: Equation<Double>!
+    var linEq3: Equation<Double>!
 
     override func setUp()
     {
@@ -30,13 +30,10 @@ class LinearRegressionEquationTests: XCTestCase
         interceptY = try! UncertainValue<Double>(value: -4, variance: 2)
         interceptX = 7
 
-        linEq1 = LinearRegressionEquation<Double>.finiteSlope(slope: slope,
-                                                              interceptY: interceptY)
-
-        linEq2 = LinearRegressionEquation<Double>.infiniteSlope(interceptX: interceptX)
-
-        linEq3 = LinearRegressionEquation<Double>.degenerate(interceptX: interceptX,
-                                                             interceptY: interceptY.value)
+        linEq1 = Equation<Double>.finiteSlope(slope: slope, interceptY: interceptY)
+        linEq2 = Equation<Double>.infiniteSlope(interceptX: interceptX)
+        linEq3 = Equation<Double>.degenerate(interceptX: interceptX,
+                                             interceptY: interceptY.value)
     }
 
     // MARK: -
@@ -78,10 +75,7 @@ class LinearRegressionEquationTests: XCTestCase
     func testHasZeroSlope0()
     {
         slope = try! UncertainValue<Double>(value: 0, variance: 5)
-
-        linEq1 = LinearRegressionEquation<Double>.finiteSlope(slope: slope,
-                                                              interceptY: interceptY)
-
+        linEq1 = Equation<Double>.finiteSlope(slope: slope, interceptY: interceptY)
         XCTAssertTrue(linEq1.hasZeroSlope)
     }
 
@@ -142,7 +136,7 @@ class LinearRegressionEquationTests: XCTestCase
     func testInterceptY3()
     {
         let expected = try! UncertainValue<Double>(value: -4, variance: 0)
-        
+
         let resulted = linEq3.interceptY
         XCTAssertEqual(resulted, expected)
     }
@@ -152,11 +146,7 @@ class LinearRegressionEquationTests: XCTestCase
     func testInterceptX0()
     {
         slope = try! UncertainValue<Double>(value: 0, variance: 5)
-
-        linEq1 = LinearRegressionEquation<Double>.finiteSlope(
-            slope: slope,
-            interceptY: interceptY)
-
+        linEq1 = Equation<Double>.finiteSlope(slope: slope, interceptY: interceptY)
         XCTAssertEqual(linEq1.interceptX, nil)
     }
 
@@ -208,12 +198,9 @@ class LinearRegressionEquationTests: XCTestCase
         let intcptY1 = try! UncertainValue<Double>(value: iy1, variance: viy1)
         let intcptY2 = try! UncertainValue<Double>(value: iy2, variance: viy2)
 
-        let linEq1 = LinearRegressionEquation<Double>.finiteSlope(slope: slope1,
-                                                                  interceptY: intcptY1)
+        let linEq1 = Equation<Double>.finiteSlope(slope: slope1, interceptY: intcptY1)
+        let linEq2 = Equation<Double>.finiteSlope(slope: slope2, interceptY: intcptY2)
 
-        let linEq2 = LinearRegressionEquation<Double>.finiteSlope(slope: slope2,
-                                                                  interceptY: intcptY2)
-        
         XCTAssertTrue(linEq2 != linEq1)
     }
 
@@ -237,12 +224,9 @@ class LinearRegressionEquationTests: XCTestCase
         let intcptY1 = try! UncertainValue<Double>(value: iy1, variance: viy1)
         let intcptY2 = try! UncertainValue<Double>(value: iy2, variance: viy2)
 
-        let linEq1 = LinearRegressionEquation<Double>.finiteSlope(slope: slope1,
-                                                                  interceptY: intcptY1)
+        let linEq1 = Equation<Double>.finiteSlope(slope: slope1, interceptY: intcptY1)
+        let linEq2 = Equation<Double>.finiteSlope(slope: slope2, interceptY: intcptY2)
 
-        let linEq2 = LinearRegressionEquation<Double>.finiteSlope(slope: slope2,
-                                                                  interceptY: intcptY2)
-        
         XCTAssertTrue(linEq2 != linEq1)
     }
 
@@ -266,12 +250,9 @@ class LinearRegressionEquationTests: XCTestCase
         let intcptY1 = try! UncertainValue<Double>(value: iy1, variance: viy1)
         let intcptY2 = try! UncertainValue<Double>(value: iy2, variance: viy2)
 
-        let linEq1 = LinearRegressionEquation<Double>.finiteSlope(slope: slope1,
-                                                                  interceptY: intcptY1)
+        let linEq1 = Equation<Double>.finiteSlope(slope: slope1, interceptY: intcptY1)
+        let linEq2 = Equation<Double>.finiteSlope(slope: slope2, interceptY: intcptY2)
 
-        let linEq2 = LinearRegressionEquation<Double>.finiteSlope(slope: slope2,
-                                                                  interceptY: intcptY2)
-        
         XCTAssertTrue(linEq2 != linEq1)
     }
 
@@ -295,12 +276,9 @@ class LinearRegressionEquationTests: XCTestCase
         let intcptY1 = try! UncertainValue<Double>(value: iy1, variance: viy1)
         let intcptY2 = try! UncertainValue<Double>(value: iy2, variance: viy2)
 
-        let linEq1 = LinearRegressionEquation<Double>.finiteSlope(slope: slope1,
-                                                                  interceptY: intcptY1)
+        let linEq1 = Equation<Double>.finiteSlope(slope: slope1, interceptY: intcptY1)
+        let linEq2 = Equation<Double>.finiteSlope(slope: slope2, interceptY: intcptY2)
 
-        let linEq2 = LinearRegressionEquation<Double>.finiteSlope(slope: slope2,
-                                                                  interceptY: intcptY2)
-        
         XCTAssertTrue(linEq2 != linEq1)
     }
 
@@ -324,17 +302,17 @@ class LinearRegressionEquationTests: XCTestCase
         let ix1: Double = 10
         let ix2: Double = 1
 
-        let linEq1 = LinearRegressionEquation<Double>.infiniteSlope(interceptX: ix1)
-        let linEq2 = LinearRegressionEquation<Double>.infiniteSlope(interceptX: ix2)
+        let linEq1 = Equation<Double>.infiniteSlope(interceptX: ix1)
+        let linEq2 = Equation<Double>.infiniteSlope(interceptX: ix2)
 
         XCTAssertTrue(linEq2 != linEq1)
     }
-    
+
     func testConformanceToEquatable23()
     {
         XCTAssertTrue(linEq2 != linEq3)
     }
-    
+
     func testConformanceToEquatable33a()
     {
         XCTAssertTrue(linEq3 == linEq3)
@@ -347,10 +325,8 @@ class LinearRegressionEquationTests: XCTestCase
 
         let iy: Double = 2
 
-        let linEq1 = LinearRegressionEquation<Double>.degenerate(interceptX: ix1,
-                                                                 interceptY: iy)
-        let linEq2 = LinearRegressionEquation<Double>.degenerate(interceptX: ix2,
-                                                                 interceptY: iy)
+        let linEq1 = Equation<Double>.degenerate(interceptX: ix1, interceptY: iy)
+        let linEq2 = Equation<Double>.degenerate(interceptX: ix2, interceptY: iy)
 
         XCTAssertTrue(linEq2 != linEq1)
     }
@@ -362,11 +338,9 @@ class LinearRegressionEquationTests: XCTestCase
         let iy1: Double = 20
         let iy2: Double = 2
 
-        let linEq1 = LinearRegressionEquation<Double>.degenerate(interceptX: ix,
-                                                                 interceptY: iy1)
-        let linEq2 = LinearRegressionEquation<Double>.degenerate(interceptX: ix,
-                                                                 interceptY: iy2)
-
+        let linEq1 = Equation<Double>.degenerate(interceptX: ix, interceptY: iy1)
+        let linEq2 = Equation<Double>.degenerate(interceptX: ix, interceptY: iy2)
+        
         XCTAssertTrue(linEq2 != linEq1)
     }
 }
