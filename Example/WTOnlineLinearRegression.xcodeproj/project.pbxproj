@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9C4F7A1E09FE3700E19B4D /* LinearRegressionDataSumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F791E09FE3700E19B4D /* LinearRegressionDataSumsTests.swift */; };
 		3BBA4F3E1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F3D1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift */; };
 		3BBA4F461E0906F7000C42E1 /* UncertainValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F451E0906F7000C42E1 /* UncertainValueTests.swift */; };
 		3BBA4F4A1E090774000C42E1 /* ObservationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F491E090774000C42E1 /* ObservationTests.swift */; };
@@ -18,6 +19,7 @@
 		026F5ABD38EC47FF7DC7B6A7 /* Pods_WTOnlineLinearRegression_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTOnlineLinearRegression_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFD576C7506E2FD669EF51C /* WTOnlineLinearRegression.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WTOnlineLinearRegression.podspec; path = ../WTOnlineLinearRegression.podspec; sourceTree = "<group>"; };
 		3B7C31701DF549E5008D4CD3 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		3B9C4F791E09FE3700E19B4D /* LinearRegressionDataSumsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegressionDataSumsTests.swift; sourceTree = "<group>"; };
 		3BBA4F3D1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidArgumentErrorTests.swift; sourceTree = "<group>"; };
 		3BBA4F451E0906F7000C42E1 /* UncertainValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncertainValueTests.swift; sourceTree = "<group>"; };
 		3BBA4F491E090774000C42E1 /* ObservationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationTests.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				3BBA4F451E0906F7000C42E1 /* UncertainValueTests.swift */,
 				3BBA4F491E090774000C42E1 /* ObservationTests.swift */,
 				3BBA4F4D1E0909F4000C42E1 /* LinearRegressionEquationTests.swift */,
+				3B9C4F791E09FE3700E19B4D /* LinearRegressionDataSumsTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBA4F3E1E08FF59000C42E1 /* InvalidArgumentErrorTests.swift in Sources */,
+				3B9C4F7A1E09FE3700E19B4D /* LinearRegressionDataSumsTests.swift in Sources */,
 				3BBA4F461E0906F7000C42E1 /* UncertainValueTests.swift in Sources */,
 				3BBA4F4A1E090774000C42E1 /* ObservationTests.swift in Sources */,
 				3BBA4F4E1E0909F4000C42E1 /* LinearRegressionEquationTests.swift in Sources */,
