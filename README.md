@@ -36,7 +36,7 @@ You may also optionally request `WTOnlineLinearRegression` to record the history
 
 ## Documentation
 
-Full documentation is provided in the source files. Additionally, the main mathematical results used to implement `WTOnlineLinearRegression` are available in a pdf document [here]().
+Full documentation is provided in the source files. Additionally, the main mathematical results used to implement `WTOnlineLinearRegression` are available in a pdf document [here](https://github.com/wltrup/Swift-WTOnlineLinearRegression/blob/master/WTOnlineLinearRegression.pdf).
 
 ## Demo app
 
