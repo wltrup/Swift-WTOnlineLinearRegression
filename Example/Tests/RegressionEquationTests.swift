@@ -14,9 +14,11 @@ import WTOnlineLinearRegression
 
 class RegressionEquationTests: XCTestCase
 {
-    var slope: UncertainValue<Double>!
-    var interceptY: UncertainValue<Double>!
-    var interceptX: Double!
+    var slope = try! UncertainValue<Double>(value: 3, variance: 5)
+    var interceptY = try! UncertainValue<Double>(value: -4, variance: 2)
+    var interceptX: Double = 7
+    var x: Double = -4
+    var y: Double = 3
 
     var linEq1: RegressionEquation<Double>!
     var linEq2: RegressionEquation<Double>!
@@ -26,15 +28,10 @@ class RegressionEquationTests: XCTestCase
     {
         super.setUp()
 
-        slope = try! UncertainValue<Double>(value: 3, variance: 5)
-        interceptY = try! UncertainValue<Double>(value: -4, variance: 2)
-        interceptX = 7
-
         linEq1 = RegressionEquation<Double>.finiteSlope(slope: slope,
                                                         interceptY: interceptY)
         linEq2 = RegressionEquation<Double>.infiniteSlope(interceptX: interceptX)
-        linEq3 = RegressionEquation<Double>.degenerate(interceptX: interceptX,
-                                                       interceptY: interceptY.value)
+        linEq3 = RegressionEquation<Double>.degenerate(x: x, y: y)
     }
 
     // MARK: -
@@ -135,12 +132,9 @@ class RegressionEquationTests: XCTestCase
         XCTAssertEqual(resulted, expected)
     }
 
-    func testInterceptY3()
+    func testY3()
     {
-        let expected = try! UncertainValue<Double>(value: -4, variance: 0)
-
-        let resulted = linEq3.interceptY
-        XCTAssertEqual(resulted, expected)
+        XCTAssertEqual(linEq3.interceptY, nil)
     }
 
     // MARK: -
@@ -169,9 +163,7 @@ class RegressionEquationTests: XCTestCase
 
     func testInterceptX3()
     {
-        let expected = interceptX
-        let resulted = linEq3.interceptX
-        XCTAssertEqual(resulted, expected)
+        XCTAssertEqual(linEq3.interceptX, nil)
     }
 
     // MARK: -
@@ -331,26 +323,26 @@ class RegressionEquationTests: XCTestCase
 
     func testConformanceToEquatable33b()
     {
-        let ix1: Double = 10
-        let ix2: Double = 1
+        let x1: Double = 10
+        let x2: Double = 1
 
-        let iy: Double = 2
+        let y: Double = 2
 
-        let linEq1 = RegressionEquation<Double>.degenerate(interceptX: ix1, interceptY: iy)
-        let linEq2 = RegressionEquation<Double>.degenerate(interceptX: ix2, interceptY: iy)
+        let linEq1 = RegressionEquation<Double>.degenerate(x: x1, y: y)
+        let linEq2 = RegressionEquation<Double>.degenerate(x: x2, y: y)
         
         XCTAssertTrue(linEq2 != linEq1)
     }
     
     func testConformanceToEquatable33c()
     {
-        let ix: Double = 1
+        let x: Double = 1
         
-        let iy1: Double = 20
-        let iy2: Double = 2
+        let y1: Double = 20
+        let y2: Double = 2
         
-        let linEq1 = RegressionEquation<Double>.degenerate(interceptX: ix, interceptY: iy1)
-        let linEq2 = RegressionEquation<Double>.degenerate(interceptX: ix, interceptY: iy2)
+        let linEq1 = RegressionEquation<Double>.degenerate(x: x, y: y1)
+        let linEq2 = RegressionEquation<Double>.degenerate(x: x, y: y2)
         
         XCTAssertTrue(linEq2 != linEq1)
     }

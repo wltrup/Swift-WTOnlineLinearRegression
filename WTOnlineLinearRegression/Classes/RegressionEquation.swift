@@ -62,7 +62,7 @@ public enum RegressionEquation<BFPType: BinaryFloatingPoint>: Equatable
     /// Represents a degenerate line corresponding to a single point.
     /// This happens when attempting to do a regression on several
     /// **identical** observations.
-    case degenerate(interceptX: BFPType, interceptY: BFPType)
+    case degenerate(x: BFPType, y: BFPType)
 
     // MARK: -
 
@@ -124,9 +124,6 @@ public enum RegressionEquation<BFPType: BinaryFloatingPoint>: Equatable
         case .finiteSlope(_, let interceptY):
             return interceptY
 
-        case .degenerate(_, let interceptY):
-            return try? UncertainValue<BFPType>(value: interceptY, variance: 0)
-
         default:
             return nil
         }
@@ -134,17 +131,17 @@ public enum RegressionEquation<BFPType: BinaryFloatingPoint>: Equatable
 
     /// The value of X at which the regression line crosses the X axis.
     public var interceptX: BFPType? {
+        if self.hasZeroSlope { return nil }
         switch self
         {
         case .finiteSlope(let slope, let interceptY):
-            guard slope.value != 0 else { return nil }
             return -(interceptY.value / slope.value)
 
         case .infiniteSlope(let interceptX):
             return interceptX
 
-        case .degenerate(let interceptX, _):
-            return interceptX
+        default:
+            return nil
         }
     }
 
