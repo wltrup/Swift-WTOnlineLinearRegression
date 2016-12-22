@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WTOnlineLinearRegression'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'WTOnlineLinearRegression efficiently performs linear regression on one-dimensional data, with or without variance in the dependent quantity.'
   s.description      = <<-DESC
     WTOnlineLinearRegression efficiently performs linear regression on one-dimensional data, with or without variance in the dependent quantity. It supports adding and removing data points, as well as a history feature.
