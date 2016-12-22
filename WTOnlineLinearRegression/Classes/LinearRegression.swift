@@ -399,8 +399,8 @@ extension LinearRegression
         newRsquared = min(newRsquared!, 1) // since round-off errors may push this above 1
 
         let u = newMeanResidualSE! / newDelta
-        let f: BFPType = (newNumObs == 2 ? 1 : 2) // This is a bit of a hack, but it's ok because
-        var aVar = (4 * u) / (newSumOne - f)      // we get a higher var for only 2 observations
+        let f: BFPType = (newNumObs == 2 ? 1 : 2)     // This is a bit of a hack, but it's ok because
+        var aVar = (4 * u) / (BFPType(newNumObs) - f) // we get a higher var for only 2 observations
         aVar = max(0, aVar) // since round-off errors may make this negative
 
         let bVar = aVar * newMeanXsq
