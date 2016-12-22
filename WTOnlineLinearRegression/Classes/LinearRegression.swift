@@ -327,11 +327,17 @@ extension LinearRegression
         ysqovar = ysq / yvar
 
         newSumOne = currentData.sumOneOverVarianceY      + sign * oneovar
+        newSumOne = max(0, newSumOne) // since round-off errors may make this negative
+
         newSumX   = currentData.sumXoverVarianceY        + sign * xovar
         newSumY   = currentData.sumYoverVarianceY        + sign * yovar
         newSumXY  = currentData.sumXYoverVarianceY       + sign * xyovar
+
         newSumXsq = currentData.sumXsquaredOverVarianceY + sign * xsqovar
+        newSumXsq = max(0, newSumXsq) // since round-off errors may make this negative
+
         newSumYsq = currentData.sumYsquaredOverVarianceY + sign * ysqovar
+        newSumYsq = max(0, newSumYsq) // since round-off errors may make this negative
 
         newMeanX   = newSumX   / newSumOne
         newMeanY   = newSumY   / newSumOne
@@ -340,10 +346,13 @@ extension LinearRegression
         newMeanYsq = newSumYsq / newSumOne
 
         newDelta = newMeanXsq - newMeanX * newMeanX
+        newDelta = max(0, newDelta) // since round-off errors may make this negative
+
         newDeltaTimesSlope = newMeanXY - newMeanX * newMeanY
         newDeltaTimesIntcptY = newMeanXsq * newMeanY - newMeanX * newMeanXY
 
         newMeanTotalSE = newMeanYsq - newMeanY * newMeanY
+        newMeanTotalSE = max(0, newMeanTotalSE) // since round-off errors may make this negative
     }
 
     fileprivate func resetEquationRelatedQuantities()
@@ -375,18 +384,25 @@ extension LinearRegression
 
         newMeanResidualSE =
             newMeanYsq - (newMeanXY * a + newMeanY * b)
+        newMeanResidualSE = max(0, newMeanResidualSE!) // since round-off errors may make this negative
 
         newMeanRegressionSE =
             (newMeanXY - 2 * newMeanX * newMeanY) * a + (newMeanY - b) * newMeanY
+        newMeanRegressionSE = max(0, newMeanRegressionSE!) // since round-off errors may make this negative
 
         if newMeanTotalSE == 0
         { newRsquared = 1 } // horizontal line
         else
         { newRsquared = 1 - (newMeanResidualSE! / newMeanTotalSE) }
 
+        newRsquared = max(0, newRsquared!) // since round-off errors may make this negative
+        newRsquared = min(newRsquared!, 1) // since round-off errors may push this above 1
+
         let u = newMeanResidualSE! / newDelta
         let f: BFPType = (newNumObs == 2 ? 1 : 2) // This is a bit of a hack, but it's ok because
-        let aVar = (4 * u) / (newSumOne - f)      // we get a higher var for only 2 observations
+        var aVar = (4 * u) / (newSumOne - f)      // we get a higher var for only 2 observations
+        aVar = max(0, aVar) // since round-off errors may make this negative
+
         let bVar = aVar * newMeanXsq
 
         let slope   = try! UncertainValue(value: a, variance: aVar)
