@@ -89,38 +89,21 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
     ///regression associated with this instance.
     public let sumYsquaredOverVarianceY: BFPType
 
-    /// The value of the discriminant in Cramer's approach to solving
-    /// for the slope and intercept.
-    public let delta: BFPType
+    /// The **mean total squared error** associated with the set of
+    /// observations.
+    public let meanTotalSquaredError: BFPType
 
-    /// The product of `delta` and the regression line's slope. Even if
-    /// delta is zero and the slope is infinite, this product is always
-    /// finite.
-    public let deltaTimesSlope: BFPType
-
-    /// The product of `delta` and the regression line' y-intercept value.
-    /// Even if delta is zero and the slope is infinite, this product is
-    /// always finite.
-    public let deltaTimesInterceptY: BFPType
-
-    /// The **sum of squared total errors** of the best regression line
-    /// representing the set of observations used to perform the linear
-    /// regression associated with this instance.
-    public let totalSSE: BFPType
-
-    /// The **sum of squared residual errors** of the best regression line
+    /// The **mean squared residual error** of the best regression line
     /// representing the set of observations used to perform the linear
     /// regression associated with this instance. It's an optional type
-    /// because there may not yet be enough observations to compute a
-    /// regression line.
-    public let residualSSE: BFPType?
+    /// because the mean squared residual error is not alwways defined.
+    public let meanSquaredResidualError: BFPType?
 
-    /// The **sum of squared regression errors** of the best regression line
+    /// The **mean squared regression error** of the best regression line
     /// representing the set of observations used to perform the linear
     /// regression associated with this instance. It's an optional type
-    /// because there may not yet be enough observations to compute a
-    /// regression line.
-    public let regressionSSE: BFPType?
+    /// because the mean squared regression error is not alwways defined.
+    public let meanSquaredRegressionError: BFPType?
 
     /// The **R-squared** quality measure of the best regression line
     /// representing the set of observations used to perform the linear
@@ -155,12 +138,9 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
         self.sumXYoverVarianceY = 0
         self.sumXsquaredOverVarianceY = 0
         self.sumYsquaredOverVarianceY = 0
-        self.delta = 0
-        self.deltaTimesSlope = 0
-        self.deltaTimesInterceptY = 0
-        self.totalSSE = 0
-        self.residualSSE = nil
-        self.regressionSSE = nil
+        self.meanTotalSquaredError = 0
+        self.meanSquaredResidualError = nil
+        self.meanSquaredRegressionError = nil
         self.rSquared = nil
         self.equation = nil
     }
@@ -178,12 +158,9 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
     ///   - sumXYoverVarianceY: sumXYoverVarianceY value.
     ///   - sumXsquaredOverVarianceY: sumXsquaredOverVarianceY value.
     ///   - sumYsquaredOverVarianceY: sumYsquaredOverVarianceY value.
-    ///   - delta: delta value.
-    ///   - deltaTimesSlope: deltaTimesSlope value.
-    ///   - deltaTimesInterceptY: deltaTimesInterceptY value.
-    ///   - totalSSE: totalSSE value.
-    ///   - residualSSE: residualSSE value.
-    ///   - regressionSSE: regressionSSE value.
+    ///   - meanTotalSquaredError: meanTotalSquaredError value.
+    ///   - meanSquaredResidualError: meanSquaredResidualError value.
+    ///   - meanSquaredRegressionError: meanSquaredRegressionError value.
     ///   - rSquared: rSquared value.
     ///   - equation: equation value.
     ///
@@ -191,9 +168,9 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
     ///           if `sumOneOverVarianceY` is less than zero or
     ///           if `sumXsquaredOverVarianceY` is less than zero or
     ///           if `sumYsquaredOverVarianceY` is less than zero or
-    ///           if `totalSSE` is less than zero or
-    ///           if `residualSSE` is less than zero or
-    ///           if `regressionSSE` is less than zero or
+    ///           if `meanTotalSquaredError` is less than zero or
+    ///           if `meanSquaredResidualError` is less than zero or
+    ///           if `meanSquaredRegressionError` is less than zero or
     ///           if `rSquared` is less than zero.
     ///
     init(index: Int,
@@ -204,12 +181,9 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
          sumXYoverVarianceY: BFPType,
          sumXsquaredOverVarianceY: BFPType,
          sumYsquaredOverVarianceY: BFPType,
-         delta: BFPType,
-         deltaTimesSlope: BFPType,
-         deltaTimesInterceptY: BFPType,
-         totalSSE: BFPType,
-         residualSSE: BFPType?,
-         regressionSSE: BFPType?,
+         meanTotalSquaredError: BFPType,
+         meanSquaredResidualError: BFPType?,
+         meanSquaredRegressionError: BFPType?,
          rSquared: BFPType?,
          equation: RegressionEquation<BFPType>?) throws
     {
@@ -225,21 +199,21 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
             throw InvalidArgumentError.negativeValue(sumYsquaredOverVarianceY)
         }
 
-        guard totalSSE >= 0 else {
-            throw InvalidArgumentError.negativeValue(totalSSE)
+        guard meanTotalSquaredError >= 0 else {
+            throw InvalidArgumentError.negativeValue(meanTotalSquaredError)
         }
 
-        if let residualSSE = residualSSE
+        if let meanSquaredResidualError = meanSquaredResidualError
         {
-            guard residualSSE >= 0 else {
-                throw InvalidArgumentError.negativeValue(residualSSE)
+            guard meanSquaredResidualError >= 0 else {
+                throw InvalidArgumentError.negativeValue(meanSquaredResidualError)
             }
         }
 
-        if let regressionSSE = regressionSSE
+        if let meanSquaredRegressionError = meanSquaredRegressionError
         {
-            guard regressionSSE >= 0 else {
-                throw InvalidArgumentError.negativeValue(regressionSSE)
+            guard meanSquaredRegressionError >= 0 else {
+                throw InvalidArgumentError.negativeValue(meanSquaredRegressionError)
             }
         }
 
@@ -258,12 +232,9 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
         self.sumXYoverVarianceY = sumXYoverVarianceY
         self.sumXsquaredOverVarianceY = sumXsquaredOverVarianceY
         self.sumYsquaredOverVarianceY = sumYsquaredOverVarianceY
-        self.delta = delta
-        self.deltaTimesSlope = deltaTimesSlope
-        self.deltaTimesInterceptY = deltaTimesInterceptY
-        self.totalSSE = totalSSE
-        self.residualSSE = residualSSE
-        self.regressionSSE = regressionSSE
+        self.meanTotalSquaredError = meanTotalSquaredError
+        self.meanSquaredResidualError = meanSquaredResidualError
+        self.meanSquaredRegressionError = meanSquaredRegressionError
         self.rSquared = rSquared
         self.equation = equation
     }
@@ -288,12 +259,9 @@ public struct RegressionData<BFPType: BinaryFloatingPoint>: Equatable, Comparabl
             lhs.sumXYoverVarianceY == rhs.sumXYoverVarianceY &&
             lhs.sumXsquaredOverVarianceY == rhs.sumXsquaredOverVarianceY &&
             lhs.sumYsquaredOverVarianceY == rhs.sumYsquaredOverVarianceY &&
-            lhs.delta == rhs.delta &&
-            lhs.deltaTimesSlope == rhs.deltaTimesSlope &&
-            lhs.deltaTimesInterceptY == rhs.deltaTimesInterceptY &&
-            lhs.totalSSE == rhs.totalSSE &&
-            lhs.residualSSE == rhs.residualSSE &&
-            lhs.regressionSSE == rhs.regressionSSE &&
+            lhs.meanTotalSquaredError == rhs.meanTotalSquaredError &&
+            lhs.meanSquaredResidualError == rhs.meanSquaredResidualError &&
+            lhs.meanSquaredRegressionError == rhs.meanSquaredRegressionError &&
             lhs.rSquared == rhs.rSquared &&
             lhs.equation == rhs.equation
     }

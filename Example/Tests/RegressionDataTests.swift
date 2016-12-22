@@ -29,20 +29,16 @@ class RegressionDataTests: XCTestCase
     let sumXsquaredOverVarianceY: Double = 15
     let sumYsquaredOverVarianceY: Double = 16
 
-    let delta: Double = 17
-    let deltaTimesSlope: Double = 18
-    let deltaTimesInterceptY: Double = 19
-
-    let totalSSE: Double = 20
-    let residualSSE: Double = 21
-    let regressionSSE: Double = 22
-    let rSquared: Double = 23
+    let meanTotalSquaredError: Double = 17
+    let meanSquaredResidualError: Double = 18
+    let meanSquaredRegressionError: Double = 19
+    let rSquared: Double = 20
 
     let slopeEq = RegressionEquation<Double>
-        .finiteSlope(slope:      try! UncertainValue<Double>(value: 24, variance: 25),
-                     interceptY: try! UncertainValue<Double>(value: 26, variance: 27))
+        .finiteSlope(slope:      try! UncertainValue<Double>(value: 21, variance: 22),
+                     interceptY: try! UncertainValue<Double>(value: 23, variance: 24))
 
-    let verticalEq = RegressionEquation<Double>.infiniteSlope(interceptX: 28)
+    let verticalEq = RegressionEquation<Double>.infiniteSlope(interceptX: 25)
 
     // MARK: -
 
@@ -58,12 +54,9 @@ class RegressionDataTests: XCTestCase
         XCTAssertEqual(sut.sumXYoverVarianceY, 0)
         XCTAssertEqual(sut.sumXsquaredOverVarianceY, 0)
         XCTAssertEqual(sut.sumYsquaredOverVarianceY, 0)
-        XCTAssertEqual(sut.delta, 0)
-        XCTAssertEqual(sut.deltaTimesSlope, 0)
-        XCTAssertEqual(sut.deltaTimesInterceptY, 0)
-        XCTAssertEqual(sut.totalSSE, 0)
-        XCTAssertEqual(sut.residualSSE, nil)
-        XCTAssertEqual(sut.regressionSSE, nil)
+        XCTAssertEqual(sut.meanTotalSquaredError, 0)
+        XCTAssertEqual(sut.meanSquaredResidualError, nil)
+        XCTAssertEqual(sut.meanSquaredRegressionError, nil)
         XCTAssertEqual(sut.rSquared, nil)
         XCTAssertEqual(sut.equation, nil)
     }
@@ -79,12 +72,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -98,12 +88,9 @@ class RegressionDataTests: XCTestCase
         XCTAssertEqual(sut.sumXYoverVarianceY, sumXYoverVarianceY)
         XCTAssertEqual(sut.sumXsquaredOverVarianceY, sumXsquaredOverVarianceY)
         XCTAssertEqual(sut.sumYsquaredOverVarianceY, sumYsquaredOverVarianceY)
-        XCTAssertEqual(sut.delta, delta)
-        XCTAssertEqual(sut.deltaTimesSlope, deltaTimesSlope)
-        XCTAssertEqual(sut.deltaTimesInterceptY, deltaTimesInterceptY)
-        XCTAssertEqual(sut.totalSSE, totalSSE)
-        XCTAssertEqual(sut.residualSSE, residualSSE)
-        XCTAssertEqual(sut.regressionSSE, regressionSSE)
+        XCTAssertEqual(sut.meanTotalSquaredError, meanTotalSquaredError)
+        XCTAssertEqual(sut.meanSquaredResidualError, meanSquaredResidualError)
+        XCTAssertEqual(sut.meanSquaredRegressionError, meanSquaredRegressionError)
         XCTAssertEqual(sut.rSquared, rSquared)
         XCTAssertEqual(sut.equation, slopeEq)
     }
@@ -125,12 +112,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -161,12 +145,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -197,12 +178,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -220,7 +198,7 @@ class RegressionDataTests: XCTestCase
 
     func testParamsInitThrowsOnNegativeTotalSSE()
     {
-        let totalSSE: Double = -1
+        let meanTotalSquaredError: Double = -1
 
         do
         {
@@ -233,12 +211,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -247,7 +222,7 @@ class RegressionDataTests: XCTestCase
         }
         catch
         {
-            let expected = InvalidArgumentError.negativeValue(totalSSE)
+            let expected = InvalidArgumentError.negativeValue(meanTotalSquaredError)
 
             XCTAssertTrue(error is InvalidArgumentError<Double>)
             XCTAssertEqual(error as! InvalidArgumentError<Double>, expected)
@@ -256,7 +231,7 @@ class RegressionDataTests: XCTestCase
 
     func testParamsInitThrowsOnNegativeResidualSSE()
     {
-        let residualSSE: Double = -1
+        let meanSquaredResidualError: Double = -1
 
         do
         {
@@ -269,12 +244,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -283,7 +255,7 @@ class RegressionDataTests: XCTestCase
         }
         catch
         {
-            let expected = InvalidArgumentError.negativeValue(residualSSE)
+            let expected = InvalidArgumentError.negativeValue(meanSquaredResidualError)
 
             XCTAssertTrue(error is InvalidArgumentError<Double>)
             XCTAssertEqual(error as! InvalidArgumentError<Double>, expected)
@@ -292,7 +264,7 @@ class RegressionDataTests: XCTestCase
 
     func testParamsInitThrowsOnNegativeRegressionSSE()
     {
-        let regressionSSE: Double = -1
+        let meanSquaredRegressionError: Double = -1
 
         do
         {
@@ -305,12 +277,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -319,7 +288,7 @@ class RegressionDataTests: XCTestCase
         }
         catch
         {
-            let expected = InvalidArgumentError.negativeValue(regressionSSE)
+            let expected = InvalidArgumentError.negativeValue(meanSquaredRegressionError)
 
             XCTAssertTrue(error is InvalidArgumentError<Double>)
             XCTAssertEqual(error as! InvalidArgumentError<Double>, expected)
@@ -341,12 +310,9 @@ class RegressionDataTests: XCTestCase
                 sumXYoverVarianceY: sumXYoverVarianceY,
                 sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
                 sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-                delta: delta,
-                deltaTimesSlope: deltaTimesSlope,
-                deltaTimesInterceptY: deltaTimesInterceptY,
-                totalSSE: totalSSE,
-                residualSSE: residualSSE,
-                regressionSSE: regressionSSE,
+                meanTotalSquaredError: meanTotalSquaredError,
+                meanSquaredResidualError: meanSquaredResidualError,
+                meanSquaredRegressionError: meanSquaredRegressionError,
                 rSquared: rSquared,
                 equation: slopeEq
             )
@@ -375,12 +341,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -400,12 +363,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -419,12 +379,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -448,12 +405,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -471,12 +425,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -495,12 +446,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -514,12 +462,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -538,12 +483,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -557,12 +499,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -581,12 +520,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -600,12 +536,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -624,12 +557,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: 1,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -643,12 +573,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: 2,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -667,12 +594,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: 1,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -686,12 +610,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: 2,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -710,12 +631,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: 1,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -729,141 +647,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: 2,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
-            rSquared: rSquared,
-            equation: slopeEq
-        )
-
-        XCTAssertTrue(sut2 != sut1)
-    }
-
-    func testInequalityDelta()
-    {
-        let sut1 = try! RegressionData<Double>(
-            index: index,
-            observations: observations,
-            sumOneOverVarianceY: sumOneOverVarianceY,
-            sumXoverVarianceY: sumXoverVarianceY,
-            sumYoverVarianceY: sumYoverVarianceY,
-            sumXYoverVarianceY: sumXYoverVarianceY,
-            sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
-            sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: 1,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
-            rSquared: rSquared,
-            equation: slopeEq
-        )
-
-        let sut2 = try! RegressionData<Double>(
-            index: index,
-            observations: observations,
-            sumOneOverVarianceY: sumOneOverVarianceY,
-            sumXoverVarianceY: sumXoverVarianceY,
-            sumYoverVarianceY: sumYoverVarianceY,
-            sumXYoverVarianceY: sumXYoverVarianceY,
-            sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
-            sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: 2,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
-            rSquared: rSquared,
-            equation: slopeEq
-        )
-
-        XCTAssertTrue(sut2 != sut1)
-    }
-
-    func testInequalityDeltaTimesSlope()
-    {
-        let sut1 = try! RegressionData<Double>(
-            index: index,
-            observations: observations,
-            sumOneOverVarianceY: sumOneOverVarianceY,
-            sumXoverVarianceY: sumXoverVarianceY,
-            sumYoverVarianceY: sumYoverVarianceY,
-            sumXYoverVarianceY: sumXYoverVarianceY,
-            sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
-            sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: 1,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
-            rSquared: rSquared,
-            equation: slopeEq
-        )
-
-        let sut2 = try! RegressionData<Double>(
-            index: index,
-            observations: observations,
-            sumOneOverVarianceY: sumOneOverVarianceY,
-            sumXoverVarianceY: sumXoverVarianceY,
-            sumYoverVarianceY: sumYoverVarianceY,
-            sumXYoverVarianceY: sumXYoverVarianceY,
-            sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
-            sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: 2,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
-            rSquared: rSquared,
-            equation: slopeEq
-        )
-
-        XCTAssertTrue(sut2 != sut1)
-    }
-
-    func testInequalityDeltaTimesInterceptY()
-    {
-        let sut1 = try! RegressionData<Double>(
-            index: index,
-            observations: observations,
-            sumOneOverVarianceY: sumOneOverVarianceY,
-            sumXoverVarianceY: sumXoverVarianceY,
-            sumYoverVarianceY: sumYoverVarianceY,
-            sumXYoverVarianceY: sumXYoverVarianceY,
-            sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
-            sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: 1,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
-            rSquared: rSquared,
-            equation: slopeEq
-        )
-
-        let sut2 = try! RegressionData<Double>(
-            index: index,
-            observations: observations,
-            sumOneOverVarianceY: sumOneOverVarianceY,
-            sumXoverVarianceY: sumXoverVarianceY,
-            sumYoverVarianceY: sumYoverVarianceY,
-            sumXYoverVarianceY: sumXYoverVarianceY,
-            sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
-            sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: 2,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -882,12 +668,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: 1,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: 1,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -901,12 +684,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: 2,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: 2,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -925,12 +705,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: 1,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: 1,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -944,12 +721,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: 2,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: 2,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -968,12 +742,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: 1,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: 1,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -987,12 +758,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: 2,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: 2,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -1011,12 +779,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: 1,
             equation: slopeEq
         )
@@ -1030,12 +795,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: 2,
             equation: slopeEq
         )
@@ -1054,12 +816,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -1073,12 +832,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: verticalEq
         )
@@ -1099,12 +855,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -1123,12 +876,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
@@ -1142,12 +892,9 @@ class RegressionDataTests: XCTestCase
             sumXYoverVarianceY: sumXYoverVarianceY,
             sumXsquaredOverVarianceY: sumXsquaredOverVarianceY,
             sumYsquaredOverVarianceY: sumYsquaredOverVarianceY,
-            delta: delta,
-            deltaTimesSlope: deltaTimesSlope,
-            deltaTimesInterceptY: deltaTimesInterceptY,
-            totalSSE: totalSSE,
-            residualSSE: residualSSE,
-            regressionSSE: regressionSSE,
+            meanTotalSquaredError: meanTotalSquaredError,
+            meanSquaredResidualError: meanSquaredResidualError,
+            meanSquaredRegressionError: meanSquaredRegressionError,
             rSquared: rSquared,
             equation: slopeEq
         )
