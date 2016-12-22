@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29AAC57ECCC238CD66463DC993970BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3B47B04E1E0B97C7004C8D52 /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F831E0A174A00E19B4D /* LinearRegression.swift */; };
 		3B9C4F7C1E0A020A00E19B4D /* RegressionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F7B1E0A020A00E19B4D /* RegressionData.swift */; };
 		3B9C4F801E0A15FB00E19B4D /* RegressionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F7F1E0A15FB00E19B4D /* RegressionError.swift */; };
 		3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */; };
@@ -38,6 +39,8 @@
 		3231226EEABEA706D9DC9E7CACDA1A72 /* WTOnlineLinearRegression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-prefix.pch"; sourceTree = "<group>"; };
 		3B9C4F7B1E0A020A00E19B4D /* RegressionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionData.swift; sourceTree = "<group>"; };
 		3B9C4F7F1E0A15FB00E19B4D /* RegressionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionError.swift; sourceTree = "<group>"; };
+		3B9C4F831E0A174A00E19B4D /* LinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
+		3B9C4F891E0A1A0800E19B4D /* WTOnlineLinearRegression.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = WTOnlineLinearRegression.pdf; sourceTree = "<group>"; };
 		3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidArgumentError.swift; sourceTree = "<group>"; };
 		3BBA4F471E09070D000C42E1 /* UncertainValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncertainValue.swift; sourceTree = "<group>"; };
 		3BBA4F4B1E09077D000C42E1 /* Observation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
@@ -177,12 +180,14 @@
 		BEC762080744D41349086442293482F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C4F891E0A1A0800E19B4D /* WTOnlineLinearRegression.pdf */,
 				3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */,
 				3BBA4F471E09070D000C42E1 /* UncertainValue.swift */,
 				3BBA4F4B1E09077D000C42E1 /* Observation.swift */,
 				3BBA4F4F1E0909FE000C42E1 /* RegressionEquation.swift */,
 				3B9C4F7B1E0A020A00E19B4D /* RegressionData.swift */,
 				3B9C4F7F1E0A15FB00E19B4D /* RegressionError.swift */,
+				3B9C4F831E0A174A00E19B4D /* LinearRegression.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */,
 				3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */,
 				55DDA2839542C88BBFC7CE7E89C9046D /* WTOnlineLinearRegression-dummy.m in Sources */,
+				3B47B04E1E0B97C7004C8D52 /* LinearRegression.swift in Sources */,
 				3BBA4F501E0909FE000C42E1 /* RegressionEquation.swift in Sources */,
 				3B9C4F801E0A15FB00E19B4D /* RegressionError.swift in Sources */,
 			);
