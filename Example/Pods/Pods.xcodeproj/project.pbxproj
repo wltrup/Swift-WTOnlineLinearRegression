@@ -7,107 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29AAC57ECCC238CD66463DC993970BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		3B47B04E1E0B97C7004C8D52 /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F831E0A174A00E19B4D /* LinearRegression.swift */; };
-		3B9C4F7C1E0A020A00E19B4D /* RegressionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F7B1E0A020A00E19B4D /* RegressionData.swift */; };
-		3B9C4F801E0A15FB00E19B4D /* RegressionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4F7F1E0A15FB00E19B4D /* RegressionError.swift */; };
-		3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */; };
-		3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F471E09070D000C42E1 /* UncertainValue.swift */; };
-		3BBA4F4C1E09077D000C42E1 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F4B1E09077D000C42E1 /* Observation.swift */; };
-		3BBA4F501E0909FE000C42E1 /* RegressionEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA4F4F1E0909FE000C42E1 /* RegressionEquation.swift */; };
-		55DDA2839542C88BBFC7CE7E89C9046D /* WTOnlineLinearRegression-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF4366FC2DE09CD971C431A825EAB7 /* WTOnlineLinearRegression-dummy.m */; };
-		C1841D2A9C05894A42C5C79801292A4C /* WTOnlineLinearRegression-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5C50A97723BCF94B053C64FE823225 /* WTOnlineLinearRegression-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFB89DEFBB0424CD4A36D211434577E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		DD21B01960A7682F25A6A5745AC0301C /* Pods-WTOnlineLinearRegression_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1F9AF07AE3A785AE991BE3AC57C296 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F413CA73A5FF1DB6A4E7A1123D96C88F /* Pods-WTOnlineLinearRegression_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678785C7B46017086715D37D98DD6DA /* Pods-WTOnlineLinearRegression_Tests-dummy.m */; };
+		329A70505BA7D2CE87C26AAF791A502D /* WTOnlineLinearRegression-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428E9152A63BF37B2D80B0CAAE406DB /* WTOnlineLinearRegression-dummy.m */; };
+		344A1C9972E2CB43B27C6A87661CB83B /* RegressionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D01A895B2C4295A471920436B8CAF /* RegressionError.swift */; };
+		377AF89DBACC65BFC52B1521C6B08F58 /* UncertainValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0818C3105A3CF8CDD2D0FF715301F71 /* UncertainValue.swift */; };
+		4398F1170CF411B570CDA76A972F9B88 /* Pods-WTOnlineLinearRegression_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E740F7ED3DD335268B0D3960191421E /* Pods-WTOnlineLinearRegression_Tests-dummy.m */; };
+		47A394B16268D5B45BE32ED9645B445A /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3174E68B84C6796A7B31BCFA3122CB18 /* LinearRegression.swift */; };
+		62E8B0DAEA10C0D85B5105CD4A50F256 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD179E5B88AE6FD7BB8079C4D9B1ED09 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7479B224B78FA50CF7342F57451E436D /* WTOnlineLinearRegression.pdf in Sources */ = {isa = PBXBuildFile; fileRef = B6FA285984FA97359AF92F387429ECB3 /* WTOnlineLinearRegression.pdf */; };
+		8DFC3B4FD69EA1DC3672A1A52BACF81F /* InvalidArgumentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98B87FD5E2434A2CC8F4273C82608F /* InvalidArgumentError.swift */; };
+		B21826E162D35FD68AD22AD3BBB1E5B1 /* WTOnlineLinearRegression-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9761E5021381B6DB8321C8D77CAE020 /* WTOnlineLinearRegression-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C86058E077F00E1D9DE80ABC98EF8115 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		C96D5B9F213626D8999F5CA12590C401 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1424AD376BCA9F1CCBB575004BD234B /* Observation.swift */; };
+		D4B379418DD28DFE97A45A78F309BE48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		DF6BA55EADA3A32F11751D4BCB78E17B /* RegressionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F56DD02570D505A1F4312A5D75D95 /* RegressionData.swift */; };
+		ED09CE8B6712DB4E680C4110A04B69E7 /* RegressionEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752816CEED3F66CD26AAF58DBFC9D85B /* RegressionEquation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0AC76FF56A9E35B9DDCC4864D6AEDE60 /* PBXContainerItemProxy */ = {
+		26A158FB128FA67D8A2FBC85DAEE01A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DE9BB1C3949E809A89DC3B1B8D9182BC;
+			remoteGlobalIDString = 86F3F4950742DEEEAA278D840BF57A29;
 			remoteInfo = WTOnlineLinearRegression;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1090B42358347E85782B924847C19A5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BA2D3A21E4B3F895C9EF15A471BD487 /* Pods-WTOnlineLinearRegression_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTOnlineLinearRegression_Tests-resources.sh"; sourceTree = "<group>"; };
-		2A50D4CE182DAB778ACCF266D5941C78 /* WTOnlineLinearRegression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTOnlineLinearRegression.modulemap; sourceTree = "<group>"; };
-		3231226EEABEA706D9DC9E7CACDA1A72 /* WTOnlineLinearRegression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-prefix.pch"; sourceTree = "<group>"; };
-		3B9C4F7B1E0A020A00E19B4D /* RegressionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionData.swift; sourceTree = "<group>"; };
-		3B9C4F7F1E0A15FB00E19B4D /* RegressionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionError.swift; sourceTree = "<group>"; };
-		3B9C4F831E0A174A00E19B4D /* LinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
-		3B9C4F891E0A1A0800E19B4D /* WTOnlineLinearRegression.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = WTOnlineLinearRegression.pdf; sourceTree = "<group>"; };
-		3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidArgumentError.swift; sourceTree = "<group>"; };
-		3BBA4F471E09070D000C42E1 /* UncertainValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncertainValue.swift; sourceTree = "<group>"; };
-		3BBA4F4B1E09077D000C42E1 /* Observation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
-		3BBA4F4F1E0909FE000C42E1 /* RegressionEquation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionEquation.swift; sourceTree = "<group>"; };
-		60A1D20F4CB682214B62B106712968A7 /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		662CC14BD8293047770A3D5460E656EF /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7678785C7B46017086715D37D98DD6DA /* Pods-WTOnlineLinearRegression_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTOnlineLinearRegression_Tests-dummy.m"; sourceTree = "<group>"; };
-		813FA0D5F49EA6777AB1AC80533C31A6 /* WTOnlineLinearRegression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WTOnlineLinearRegression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		819F99D80786E4EEAF87CB244818BA4F /* Pods-WTOnlineLinearRegression_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTOnlineLinearRegression_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		84785A8D3933B81B2E573A91BA2EBA69 /* Pods-WTOnlineLinearRegression_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WTOnlineLinearRegression_Tests.modulemap"; sourceTree = "<group>"; };
-		848C74700E93D9C5595C9671D109C702 /* Pods-WTOnlineLinearRegression_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTOnlineLinearRegression_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96BD59FE00C3750E00431F2873C8ABE1 /* Pods-WTOnlineLinearRegression_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTOnlineLinearRegression_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AB5C50A97723BCF94B053C64FE823225 /* WTOnlineLinearRegression-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-umbrella.h"; sourceTree = "<group>"; };
-		B81B3674B5435EA8A72F593850DE2178 /* WTOnlineLinearRegression.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTOnlineLinearRegression.xcconfig; sourceTree = "<group>"; };
-		C8EF4366FC2DE09CD971C431A825EAB7 /* WTOnlineLinearRegression-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTOnlineLinearRegression-dummy.m"; sourceTree = "<group>"; };
+		160D01A895B2C4295A471920436B8CAF /* RegressionError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegressionError.swift; sourceTree = "<group>"; };
+		1C05857FA806F00F998E0B2FB2906AF0 /* Pods_WTOnlineLinearRegression_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WTOnlineLinearRegression_Tests.framework; path = "Pods-WTOnlineLinearRegression_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3174E68B84C6796A7B31BCFA3122CB18 /* LinearRegression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
+		351C43CAAE4AA9405185474CC25C95E5 /* Pods-WTOnlineLinearRegression_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTOnlineLinearRegression_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		43C8EFDD95FF9EF94903219875F6B6F4 /* WTOnlineLinearRegression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-prefix.pch"; sourceTree = "<group>"; };
+		4428E9152A63BF37B2D80B0CAAE406DB /* WTOnlineLinearRegression-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTOnlineLinearRegression-dummy.m"; sourceTree = "<group>"; };
+		4ECCC3BDBE357ECF3E3D0222C248C7A1 /* Pods-WTOnlineLinearRegression_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTOnlineLinearRegression_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6610A7F5AFC6A0E0D10887C30E2F9864 /* WTOnlineLinearRegression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WTOnlineLinearRegression.framework; path = WTOnlineLinearRegression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E740F7ED3DD335268B0D3960191421E /* Pods-WTOnlineLinearRegression_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTOnlineLinearRegression_Tests-dummy.m"; sourceTree = "<group>"; };
+		752816CEED3F66CD26AAF58DBFC9D85B /* RegressionEquation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegressionEquation.swift; sourceTree = "<group>"; };
+		82FD8328D0A53F7E8B23E3451C4922B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A23978E3D9BAD76A27DC272464A3D0CE /* Pods-WTOnlineLinearRegression_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WTOnlineLinearRegression_Tests.modulemap"; sourceTree = "<group>"; };
+		A9761E5021381B6DB8321C8D77CAE020 /* WTOnlineLinearRegression-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTOnlineLinearRegression-umbrella.h"; sourceTree = "<group>"; };
+		AD179E5B88AE6FD7BB8079C4D9B1ED09 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTOnlineLinearRegression_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B6FA285984FA97359AF92F387429ECB3 /* WTOnlineLinearRegression.pdf */ = {isa = PBXFileReference; includeInIndex = 1; path = WTOnlineLinearRegression.pdf; sourceTree = "<group>"; };
+		BA7E81ABBAAD154104D0428240AD7C12 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA88972E9CCF693CAAC8A0744BF9664E /* Pods-WTOnlineLinearRegression_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTOnlineLinearRegression_Tests-resources.sh"; sourceTree = "<group>"; };
+		BC28704587B519D7D935953D5FD68428 /* WTOnlineLinearRegression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WTOnlineLinearRegression.modulemap; sourceTree = "<group>"; };
+		C0818C3105A3CF8CDD2D0FF715301F71 /* UncertainValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UncertainValue.swift; sourceTree = "<group>"; };
+		C1424AD376BCA9F1CCBB575004BD234B /* Observation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
+		C20F56DD02570D505A1F4312A5D75D95 /* RegressionData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegressionData.swift; sourceTree = "<group>"; };
+		C390C3FFB3E2F9B65E781074C4B76246 /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D471A10F9E9C1BA3AFEC1F170A721901 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB1F9AF07AE3A785AE991BE3AC57C296 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTOnlineLinearRegression_Tests-umbrella.h"; sourceTree = "<group>"; };
-		EB2C80C3A0A962E5F7E56BAB592D2315 /* Pods_WTOnlineLinearRegression_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTOnlineLinearRegression_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC98B87FD5E2434A2CC8F4273C82608F /* InvalidArgumentError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvalidArgumentError.swift; sourceTree = "<group>"; };
+		E340D9F5BE761DDE0DD100FB196B429D /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E896F4258EA8E1C1F015971148759D2C /* Pods-WTOnlineLinearRegression_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTOnlineLinearRegression_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F2FB0BA52084758F806BFCFE2EDA4D2C /* WTOnlineLinearRegression.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTOnlineLinearRegression.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		286F6554D6CCD76B5CBC6FE47FC197AC /* Frameworks */ = {
+		46FF25DD8ADB852D549DC5A85ACB4B39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29AAC57ECCC238CD66463DC993970BAD /* Foundation.framework in Frameworks */,
+				D4B379418DD28DFE97A45A78F309BE48 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31B73C5484799F72D28BD69FB2308BB5 /* Frameworks */ = {
+		A373635EB7D09C40D4B02EB41290BF85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB89DEFBB0424CD4A36D211434577E0 /* Foundation.framework in Frameworks */,
+				C86058E077F00E1D9DE80ABC98EF8115 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E5A38989B78F0604FF358CF0D95858A /* Products */ = {
+		40AFA48D93FD355F12136D8D32C90300 /* WTOnlineLinearRegression */ = {
 			isa = PBXGroup;
 			children = (
-				EB2C80C3A0A962E5F7E56BAB592D2315 /* Pods_WTOnlineLinearRegression_Tests.framework */,
-				813FA0D5F49EA6777AB1AC80533C31A6 /* WTOnlineLinearRegression.framework */,
+				A2F275A0C93E15A882DBC3684D496A86 /* Support Files */,
+				A6F44EF50C8013885B83945A087AC6FE /* WTOnlineLinearRegression */,
 			);
-			name = Products;
+			name = WTOnlineLinearRegression;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		365E2647ED87FD21530F837F5650AF62 /* Pods-WTOnlineLinearRegression_Tests */ = {
+		490B01F0D5AD876E4A880720510E9DBA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1090B42358347E85782B924847C19A5F /* Info.plist */,
-				84785A8D3933B81B2E573A91BA2EBA69 /* Pods-WTOnlineLinearRegression_Tests.modulemap */,
-				662CC14BD8293047770A3D5460E656EF /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown */,
-				60A1D20F4CB682214B62B106712968A7 /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist */,
-				7678785C7B46017086715D37D98DD6DA /* Pods-WTOnlineLinearRegression_Tests-dummy.m */,
-				848C74700E93D9C5595C9671D109C702 /* Pods-WTOnlineLinearRegression_Tests-frameworks.sh */,
-				1BA2D3A21E4B3F895C9EF15A471BD487 /* Pods-WTOnlineLinearRegression_Tests-resources.sh */,
-				EB1F9AF07AE3A785AE991BE3AC57C296 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h */,
-				819F99D80786E4EEAF87CB244818BA4F /* Pods-WTOnlineLinearRegression_Tests.debug.xcconfig */,
-				96BD59FE00C3750E00431F2873C8ABE1 /* Pods-WTOnlineLinearRegression_Tests.release.xcconfig */,
+				40AFA48D93FD355F12136D8D32C90300 /* WTOnlineLinearRegression */,
 			);
-			name = "Pods-WTOnlineLinearRegression_Tests";
-			path = "Target Support Files/Pods-WTOnlineLinearRegression_Tests";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -118,54 +110,53 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7BACCE0B6B08B661A0BC48131DCFA13C /* WTOnlineLinearRegression */ = {
+		763121D10CBB6F7F8ECE0464C89C4C35 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7E8281DC9B6EA77E9132C2DBB6E93DB9 /* Support Files */,
-				8336AC8A13C49EC8B9D3902B5C70AC93 /* WTOnlineLinearRegression */,
+				DC98B87FD5E2434A2CC8F4273C82608F /* InvalidArgumentError.swift */,
+				3174E68B84C6796A7B31BCFA3122CB18 /* LinearRegression.swift */,
+				C1424AD376BCA9F1CCBB575004BD234B /* Observation.swift */,
+				C20F56DD02570D505A1F4312A5D75D95 /* RegressionData.swift */,
+				752816CEED3F66CD26AAF58DBFC9D85B /* RegressionEquation.swift */,
+				160D01A895B2C4295A471920436B8CAF /* RegressionError.swift */,
+				C0818C3105A3CF8CDD2D0FF715301F71 /* UncertainValue.swift */,
+				B6FA285984FA97359AF92F387429ECB3 /* WTOnlineLinearRegression.pdf */,
 			);
-			name = WTOnlineLinearRegression;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		7C3782C94E9506EBDB6138911279B793 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				365E2647ED87FD21530F837F5650AF62 /* Pods-WTOnlineLinearRegression_Tests */,
-			);
-			name = "Targets Support Files";
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				CCAC5FE3E64E4981351950328FF6E004 /* Development Pods */,
+				490B01F0D5AD876E4A880720510E9DBA /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				0E5A38989B78F0604FF358CF0D95858A /* Products */,
-				7C3782C94E9506EBDB6138911279B793 /* Targets Support Files */,
+				D024256887575AE66DEB8F992DF9CA0A /* Products */,
+				CE3842BFA2D81970C1B139D867938CC2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E8281DC9B6EA77E9132C2DBB6E93DB9 /* Support Files */ = {
+		A2F275A0C93E15A882DBC3684D496A86 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D471A10F9E9C1BA3AFEC1F170A721901 /* Info.plist */,
-				2A50D4CE182DAB778ACCF266D5941C78 /* WTOnlineLinearRegression.modulemap */,
-				B81B3674B5435EA8A72F593850DE2178 /* WTOnlineLinearRegression.xcconfig */,
-				C8EF4366FC2DE09CD971C431A825EAB7 /* WTOnlineLinearRegression-dummy.m */,
-				3231226EEABEA706D9DC9E7CACDA1A72 /* WTOnlineLinearRegression-prefix.pch */,
-				AB5C50A97723BCF94B053C64FE823225 /* WTOnlineLinearRegression-umbrella.h */,
+				82FD8328D0A53F7E8B23E3451C4922B7 /* Info.plist */,
+				BC28704587B519D7D935953D5FD68428 /* WTOnlineLinearRegression.modulemap */,
+				F2FB0BA52084758F806BFCFE2EDA4D2C /* WTOnlineLinearRegression.xcconfig */,
+				4428E9152A63BF37B2D80B0CAAE406DB /* WTOnlineLinearRegression-dummy.m */,
+				43C8EFDD95FF9EF94903219875F6B6F4 /* WTOnlineLinearRegression-prefix.pch */,
+				A9761E5021381B6DB8321C8D77CAE020 /* WTOnlineLinearRegression-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/WTOnlineLinearRegression";
 			sourceTree = "<group>";
 		};
-		8336AC8A13C49EC8B9D3902B5C70AC93 /* WTOnlineLinearRegression */ = {
+		A6F44EF50C8013885B83945A087AC6FE /* WTOnlineLinearRegression */ = {
 			isa = PBXGroup;
 			children = (
-				BEC762080744D41349086442293482F6 /* Classes */,
+				763121D10CBB6F7F8ECE0464C89C4C35 /* Classes */,
 			);
+			name = WTOnlineLinearRegression;
 			path = WTOnlineLinearRegression;
 			sourceTree = "<group>";
 		};
@@ -177,76 +168,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEC762080744D41349086442293482F6 /* Classes */ = {
+		CE3842BFA2D81970C1B139D867938CC2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B9C4F891E0A1A0800E19B4D /* WTOnlineLinearRegression.pdf */,
-				3BBA4F3F1E08FF6C000C42E1 /* InvalidArgumentError.swift */,
-				3BBA4F471E09070D000C42E1 /* UncertainValue.swift */,
-				3BBA4F4B1E09077D000C42E1 /* Observation.swift */,
-				3BBA4F4F1E0909FE000C42E1 /* RegressionEquation.swift */,
-				3B9C4F7B1E0A020A00E19B4D /* RegressionData.swift */,
-				3B9C4F7F1E0A15FB00E19B4D /* RegressionError.swift */,
-				3B9C4F831E0A174A00E19B4D /* LinearRegression.swift */,
+				E4CA3F253810E41AA0A39D2EEABC8AB3 /* Pods-WTOnlineLinearRegression_Tests */,
 			);
-			path = Classes;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CCAC5FE3E64E4981351950328FF6E004 /* Development Pods */ = {
+		D024256887575AE66DEB8F992DF9CA0A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BACCE0B6B08B661A0BC48131DCFA13C /* WTOnlineLinearRegression */,
+				1C05857FA806F00F998E0B2FB2906AF0 /* Pods_WTOnlineLinearRegression_Tests.framework */,
+				6610A7F5AFC6A0E0D10887C30E2F9864 /* WTOnlineLinearRegression.framework */,
 			);
-			name = "Development Pods";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4CA3F253810E41AA0A39D2EEABC8AB3 /* Pods-WTOnlineLinearRegression_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BA7E81ABBAAD154104D0428240AD7C12 /* Info.plist */,
+				A23978E3D9BAD76A27DC272464A3D0CE /* Pods-WTOnlineLinearRegression_Tests.modulemap */,
+				C390C3FFB3E2F9B65E781074C4B76246 /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.markdown */,
+				E340D9F5BE761DDE0DD100FB196B429D /* Pods-WTOnlineLinearRegression_Tests-acknowledgements.plist */,
+				6E740F7ED3DD335268B0D3960191421E /* Pods-WTOnlineLinearRegression_Tests-dummy.m */,
+				351C43CAAE4AA9405185474CC25C95E5 /* Pods-WTOnlineLinearRegression_Tests-frameworks.sh */,
+				BA88972E9CCF693CAAC8A0744BF9664E /* Pods-WTOnlineLinearRegression_Tests-resources.sh */,
+				AD179E5B88AE6FD7BB8079C4D9B1ED09 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h */,
+				4ECCC3BDBE357ECF3E3D0222C248C7A1 /* Pods-WTOnlineLinearRegression_Tests.debug.xcconfig */,
+				E896F4258EA8E1C1F015971148759D2C /* Pods-WTOnlineLinearRegression_Tests.release.xcconfig */,
+			);
+			name = "Pods-WTOnlineLinearRegression_Tests";
+			path = "Target Support Files/Pods-WTOnlineLinearRegression_Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		60EA2A68B6C33A137C7A07FBE15D10F0 /* Headers */ = {
+		9D9B664D21545B470874473D8CED43FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD21B01960A7682F25A6A5745AC0301C /* Pods-WTOnlineLinearRegression_Tests-umbrella.h in Headers */,
+				62E8B0DAEA10C0D85B5105CD4A50F256 /* Pods-WTOnlineLinearRegression_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECE4779ABBAACD894BC77D942FA15F31 /* Headers */ = {
+		D3DA36C5A0E2ECB28510AAAD5A920EF4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1841D2A9C05894A42C5C79801292A4C /* WTOnlineLinearRegression-umbrella.h in Headers */,
+				B21826E162D35FD68AD22AD3BBB1E5B1 /* WTOnlineLinearRegression-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0BB6C0ACC7618EA0CB789D937CCC4AC4 /* Pods-WTOnlineLinearRegression_Tests */ = {
+		86F3F4950742DEEEAA278D840BF57A29 /* WTOnlineLinearRegression */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D900C61EA2BED620780A785C16C8B849 /* Build configuration list for PBXNativeTarget "Pods-WTOnlineLinearRegression_Tests" */;
+			buildConfigurationList = CC607D6D881C7A83BFC32710C372088A /* Build configuration list for PBXNativeTarget "WTOnlineLinearRegression" */;
 			buildPhases = (
-				577E5A2B5A8616688FBA11EF4EBF00F5 /* Sources */,
-				31B73C5484799F72D28BD69FB2308BB5 /* Frameworks */,
-				60EA2A68B6C33A137C7A07FBE15D10F0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1BBCE4158D42D5935FD07D9C7E1954B0 /* PBXTargetDependency */,
-			);
-			name = "Pods-WTOnlineLinearRegression_Tests";
-			productName = "Pods-WTOnlineLinearRegression_Tests";
-			productReference = EB2C80C3A0A962E5F7E56BAB592D2315 /* Pods_WTOnlineLinearRegression_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DE9BB1C3949E809A89DC3B1B8D9182BC /* WTOnlineLinearRegression */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EB29E63F45E22104472BC4516F6E329 /* Build configuration list for PBXNativeTarget "WTOnlineLinearRegression" */;
-			buildPhases = (
-				C571318B66B84A269D4D578FE306A625 /* Sources */,
-				286F6554D6CCD76B5CBC6FE47FC197AC /* Frameworks */,
-				ECE4779ABBAACD894BC77D942FA15F31 /* Headers */,
+				92C64079D460C8174775C00912CA4A12 /* Sources */,
+				46FF25DD8ADB852D549DC5A85ACB4B39 /* Frameworks */,
+				D3DA36C5A0E2ECB28510AAAD5A920EF4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -254,7 +239,25 @@
 			);
 			name = WTOnlineLinearRegression;
 			productName = WTOnlineLinearRegression;
-			productReference = 813FA0D5F49EA6777AB1AC80533C31A6 /* WTOnlineLinearRegression.framework */;
+			productReference = 6610A7F5AFC6A0E0D10887C30E2F9864 /* WTOnlineLinearRegression.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBC06835B5D80141F70F958ADABE5D59 /* Pods-WTOnlineLinearRegression_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9E3B2C6AD7A2B0560979872376A8641 /* Build configuration list for PBXNativeTarget "Pods-WTOnlineLinearRegression_Tests" */;
+			buildPhases = (
+				FC8388D4F25326F2A06DBFDB3F84049E /* Sources */,
+				A373635EB7D09C40D4B02EB41290BF85 /* Frameworks */,
+				9D9B664D21545B470874473D8CED43FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				420BDA3736EB825370939965724D45D6 /* PBXTargetDependency */,
+			);
+			name = "Pods-WTOnlineLinearRegression_Tests";
+			productName = "Pods-WTOnlineLinearRegression_Tests";
+			productReference = 1C05857FA806F00F998E0B2FB2906AF0 /* Pods_WTOnlineLinearRegression_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -265,14 +268,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					0BB6C0ACC7618EA0CB789D937CCC4AC4 = {
-						LastSwiftMigration = 0810;
-					};
-					DE9BB1C3949E809A89DC3B1B8D9182BC = {
-						LastSwiftMigration = 0810;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -282,92 +277,56 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0E5A38989B78F0604FF358CF0D95858A /* Products */;
+			productRefGroup = D024256887575AE66DEB8F992DF9CA0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0BB6C0ACC7618EA0CB789D937CCC4AC4 /* Pods-WTOnlineLinearRegression_Tests */,
-				DE9BB1C3949E809A89DC3B1B8D9182BC /* WTOnlineLinearRegression */,
+				DBC06835B5D80141F70F958ADABE5D59 /* Pods-WTOnlineLinearRegression_Tests */,
+				86F3F4950742DEEEAA278D840BF57A29 /* WTOnlineLinearRegression */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		577E5A2B5A8616688FBA11EF4EBF00F5 /* Sources */ = {
+		92C64079D460C8174775C00912CA4A12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F413CA73A5FF1DB6A4E7A1123D96C88F /* Pods-WTOnlineLinearRegression_Tests-dummy.m in Sources */,
+				8DFC3B4FD69EA1DC3672A1A52BACF81F /* InvalidArgumentError.swift in Sources */,
+				47A394B16268D5B45BE32ED9645B445A /* LinearRegression.swift in Sources */,
+				C96D5B9F213626D8999F5CA12590C401 /* Observation.swift in Sources */,
+				DF6BA55EADA3A32F11751D4BCB78E17B /* RegressionData.swift in Sources */,
+				ED09CE8B6712DB4E680C4110A04B69E7 /* RegressionEquation.swift in Sources */,
+				344A1C9972E2CB43B27C6A87661CB83B /* RegressionError.swift in Sources */,
+				377AF89DBACC65BFC52B1521C6B08F58 /* UncertainValue.swift in Sources */,
+				329A70505BA7D2CE87C26AAF791A502D /* WTOnlineLinearRegression-dummy.m in Sources */,
+				7479B224B78FA50CF7342F57451E436D /* WTOnlineLinearRegression.pdf in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C571318B66B84A269D4D578FE306A625 /* Sources */ = {
+		FC8388D4F25326F2A06DBFDB3F84049E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9C4F7C1E0A020A00E19B4D /* RegressionData.swift in Sources */,
-				3BBA4F4C1E09077D000C42E1 /* Observation.swift in Sources */,
-				3BBA4F401E08FF6C000C42E1 /* InvalidArgumentError.swift in Sources */,
-				3BBA4F481E09070D000C42E1 /* UncertainValue.swift in Sources */,
-				55DDA2839542C88BBFC7CE7E89C9046D /* WTOnlineLinearRegression-dummy.m in Sources */,
-				3B47B04E1E0B97C7004C8D52 /* LinearRegression.swift in Sources */,
-				3BBA4F501E0909FE000C42E1 /* RegressionEquation.swift in Sources */,
-				3B9C4F801E0A15FB00E19B4D /* RegressionError.swift in Sources */,
+				4398F1170CF411B570CDA76A972F9B88 /* Pods-WTOnlineLinearRegression_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1BBCE4158D42D5935FD07D9C7E1954B0 /* PBXTargetDependency */ = {
+		420BDA3736EB825370939965724D45D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WTOnlineLinearRegression;
-			target = DE9BB1C3949E809A89DC3B1B8D9182BC /* WTOnlineLinearRegression */;
-			targetProxy = 0AC76FF56A9E35B9DDCC4864D6AEDE60 /* PBXContainerItemProxy */;
+			target = 86F3F4950742DEEEAA278D840BF57A29 /* WTOnlineLinearRegression */;
+			targetProxy = 26A158FB128FA67D8A2FBC85DAEE01A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7B0581F537EACEE7B7A37E71E823E15A /* Debug */ = {
+		347A79A2A1B57FBC1FA1C91C42EFBA27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 819F99D80786E4EEAF87CB244818BA4F /* Pods-WTOnlineLinearRegression_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WTOnlineLinearRegression_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WTOnlineLinearRegression_Tests/Pods-WTOnlineLinearRegression_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_WTOnlineLinearRegression_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		83DA25E09BFE6E384395EE0165429C6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96BD59FE00C3750E00431F2873C8ABE1 /* Pods-WTOnlineLinearRegression_Tests.release.xcconfig */;
+			baseConfigurationReference = E896F4258EA8E1C1F015971148759D2C /* Pods-WTOnlineLinearRegression_Tests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -394,7 +353,6 @@
 				PRODUCT_NAME = Pods_WTOnlineLinearRegression_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -441,6 +399,42 @@
 			};
 			name = Release;
 		};
+		9861501756F8FE55F807A6CF8661145E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ECCC3BDBE357ECF3E3D0222C248C7A1 /* Pods-WTOnlineLinearRegression_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WTOnlineLinearRegression_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTOnlineLinearRegression_Tests/Pods-WTOnlineLinearRegression_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WTOnlineLinearRegression_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,9 +479,41 @@
 			};
 			name = Debug;
 		};
-		AAFE3197BDFDAF376EE9F90B33A46618 /* Debug */ = {
+		B5F0DB84DBE1A2777AA5DF4A6960C3B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B81B3674B5435EA8A72F593850DE2178 /* WTOnlineLinearRegression.xcconfig */;
+			baseConfigurationReference = F2FB0BA52084758F806BFCFE2EDA4D2C /* WTOnlineLinearRegression.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/WTOnlineLinearRegression/WTOnlineLinearRegression-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WTOnlineLinearRegression/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WTOnlineLinearRegression/WTOnlineLinearRegression.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = WTOnlineLinearRegression;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA74DD3EB08DAF2B143074CA80CE45B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2FB0BA52084758F806BFCFE2EDA4D2C /* WTOnlineLinearRegression.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -518,38 +544,6 @@
 			};
 			name = Debug;
 		};
-		D949592952A0676CF61407F62E324241 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B81B3674B5435EA8A72F593850DE2178 /* WTOnlineLinearRegression.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/WTOnlineLinearRegression/WTOnlineLinearRegression-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WTOnlineLinearRegression/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WTOnlineLinearRegression/WTOnlineLinearRegression.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = WTOnlineLinearRegression;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -562,20 +556,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EB29E63F45E22104472BC4516F6E329 /* Build configuration list for PBXNativeTarget "WTOnlineLinearRegression" */ = {
+		C9E3B2C6AD7A2B0560979872376A8641 /* Build configuration list for PBXNativeTarget "Pods-WTOnlineLinearRegression_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAFE3197BDFDAF376EE9F90B33A46618 /* Debug */,
-				D949592952A0676CF61407F62E324241 /* Release */,
+				9861501756F8FE55F807A6CF8661145E /* Debug */,
+				347A79A2A1B57FBC1FA1C91C42EFBA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D900C61EA2BED620780A785C16C8B849 /* Build configuration list for PBXNativeTarget "Pods-WTOnlineLinearRegression_Tests" */ = {
+		CC607D6D881C7A83BFC32710C372088A /* Build configuration list for PBXNativeTarget "WTOnlineLinearRegression" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B0581F537EACEE7B7A37E71E823E15A /* Debug */,
-				83DA25E09BFE6E384395EE0165429C6E /* Release */,
+				FA74DD3EB08DAF2B143074CA80CE45B0 /* Debug */,
+				B5F0DB84DBE1A2777AA5DF4A6960C3B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
