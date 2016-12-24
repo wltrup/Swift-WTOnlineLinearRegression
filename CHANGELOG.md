@@ -1,5 +1,9 @@
 # WTOnlineLinearRegression
 
+## 1.0.3
+
+No functional changes. Only updates the README.
+
 ## 1.0.2
 
 Fixes a mistake in the math pdf which translated into a bug in the code, also fixed.

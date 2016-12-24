@@ -11,17 +11,19 @@
 
 **WTOnlineLinearRegression** allows you to perform *linear* regression on one-dimensional
 data, with or without uncertainties in the dependent quantity, and it does so by updating
-its internal state in constant time on the number of data points, for each new data point.
+its internal state in constant time on the number of data points, for each new data point,
+resulting in an overall linear time complexity.
+
 In other words, it performs **online** regression, updating its internal state without
-recomputing everything from scratch (which would use the entire data set) every time a new
-data point is added.
+recomputing everything from scratch on every addition, which would use the entire data
+set every time a new data point is added, hence incurring on an overall quadratic runtime.
 
 You can also *remove* data points that have been previously added to the data set.
-Removing, however, runs in linear time on the size of the data set since it must scan it
-to guarantee that the data point being removed was once added.
+Removing, however, runs in linear time on the size of the data set, per removal, since
+it must scan the data set to guarantee that the data point being removed was once added.
 
 Additionally, **WTOnlineLinearRegression** optionally keeps a history of every data point
-addition or removal, as full snapshots of the regression at the time the data points were
+addition or removal, as full snapshots of the regression at the time each data point was
 added or removed.
 
 ## Usage ##
@@ -59,6 +61,8 @@ results used to implement `WTOnlineLinearRegression` are available in a pdf docu
 ## Demo app ##
 
 Check out the [demo app](https://github.com/wltrup/iOS-Swift-WTOnlineLinearRegressionDemo).
+
+![demo](https://github.com/wltrup/Swift-WTOnlineLinearRegression/blob/master/demo.gif)
 
 ## Tests ##
 
