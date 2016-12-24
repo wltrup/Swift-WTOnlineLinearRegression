@@ -1,5 +1,5 @@
 PODS:
-  - WTOnlineLinearRegression (1.0.2)
+  - WTOnlineLinearRegression (1.0.3)
 
 DEPENDENCIES:
   - WTOnlineLinearRegression (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WTOnlineLinearRegression: 881c19b544cfb8e30763e04e970414f965e6d66e
+  WTOnlineLinearRegression: fdf1d9eae00bd722bc242d8e412e18e367a8937a
 
 PODFILE CHECKSUM: beb87b11eb4865971590c41c67f4c296e0516904
 
